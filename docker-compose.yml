@@ -105,3 +105,8 @@ services:
       - "9093:9093"
     volumes:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+  blackbox:
+    image: prom/blackbox-exporter:latest
+    restart: unless-stopped
+    ports:
+      - "9115:9115"
