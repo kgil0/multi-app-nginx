@@ -2,3 +2,4 @@ logs/
 certs/
 *.log
 *.pem
+alertmanager.yml
