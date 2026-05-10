@@ -1,41 +1,62 @@
-# Multi App Nginx Stack
+# Multi App Nginx Platform
 
-Production-style Docker infrastructure project with:
-
-- Nginx reverse proxy
-- HTTPS (Let's Encrypt)
-- Prometheus monitoring
-- Grafana dashboards
-- Loki log aggregation
-- Promtail log shipping
-- Alertmanager Discord alerts
-- GitHub Actions CI/CD
-- Automatic VPS deployment over SSH
-
-## Stack
-
-- Docker Compose
-- Nginx
-- Prometheus
-- Grafana
-- Loki
-- Promtail
-- Alertmanager
-- GitHub Actions
-- Ubuntu VPS
+Production-ready Docker platform with reverse proxy, monitoring, logging and scalable microservices architecture.
 
 ## Features
 
-- Reverse proxy load balancing
-- TLS/SSL termination
-- Security headers
-- Rate limiting
-- Bot filtering
-- Container monitoring
-- Discord alerting
-- Automated deployments
+- Dockerized multi-service architecture
+- NGINX reverse proxy
+- SSL-ready infrastructure
+- Grafana monitoring
+- Prometheus metrics
+- Loki centralized logging
+- Promtail log shipping
+- Container observability
+- Health checks
+- Production networking
+- Security-focused setup
+- Easy horizontal scaling
 
-## Deployment
+---
 
-```bash
-docker-compose up -d
+# Stack
+
+## Backend
+- Node.js
+- Express
+
+## Infrastructure
+- Docker
+- Docker Compose
+- NGINX
+
+## Monitoring
+- Grafana
+- Prometheus
+- Loki
+- Promtail
+- cAdvisor
+- Node Exporter
+
+---
+
+# Architecture
+
+```text
+Internet
+    │
+    ▼
+NGINX Reverse Proxy
+    │
+    ├── App 1
+    ├── App 2
+    ├── APIs
+    └── Static services
+
+Monitoring Stack
+    ├── Prometheus
+    ├── Grafana
+    ├── Loki
+    ├── Promtail
+    ├── cAdvisor
+    └── Node Exporter
