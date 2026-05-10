@@ -35,4 +35,4 @@ groups:
           severity: critical
         annotations:
           summary: "Site is down"
-          description: "HTTPS endpoint {{ $labels.instace }} is not responding"
+          description: "HTTPS endpoint {{ $labels.instance }} is not responding"
