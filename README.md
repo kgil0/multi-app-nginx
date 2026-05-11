@@ -1,5 +1,11 @@
 # Multi App Nginx Platform
 
+![Deploy](https://github.com/kgil0/multi-app-nginx/actions/workflows/deploy.yml/badge.svg)
+![Docker CI](https://github.com/kgil0/multi-app-nginx/actions/workflows/docker.yml/badge.svg)
+![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%2B%20Grafana-orange)
+![Logging](https://img.shields.io/badge/Logging-Loki-green)
+
 Production-ready Docker platform with reverse proxy, monitoring, logging and scalable microservices architecture.
 
 ## Features
