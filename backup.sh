@@ -2,6 +2,8 @@
 
 set -e
 
+cd "$HOME/rebuild-test"
+
 BACKUP_DIR="$HOME/rebuild-test/backups"
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 
