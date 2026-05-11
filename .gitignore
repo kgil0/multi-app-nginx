@@ -3,3 +3,5 @@ certs/
 *.log
 *.pem
 alertmanager.yml
+backups/
+*.save
