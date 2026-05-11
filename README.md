@@ -60,3 +60,26 @@ Monitoring Stack
     ├── Promtail
     ├── cAdvisor
     └── Node Exporter
+
+## Architecture Diagram
+
+```mermaid
+graph TD
+
+User --> NGINX
+
+NGINX --> APP1
+NGINX --> APP2
+NGINX --> APP3
+
+Prometheus --> cAdvisor
+Prometheus --> NodeExporter
+Prometheus --> Blackbox
+
+Grafana --> Prometheus
+Grafana --> Loki
+
+Promtail --> Loki
+
+Docker --> Promtail
+```
