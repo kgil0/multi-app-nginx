@@ -83,3 +83,17 @@ Promtail --> Loki
 
 Docker --> Promtail
 ```
+
+## Screenshots
+
+### Grafana Monitoring Dashboard
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
+
+### Loki Logs
+![Loki Logs](screenshots/loki-logs.png)
+
+### GitHub Actions CI/CD
+![GitHub Actions](screenshots/github-actions.png)
+
+### Running Docker Stack
+![Docker Containers](screenshots/docker-ps.png)
