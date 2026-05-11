@@ -36,7 +36,7 @@ services:
       retries: 3
       start_period: 10s
 
-# Reverse proxy handing HTTPS traffic
+# Reverse proxy handling HTTPS traffic
   nginx:
     image: nginx
     restart: unless-stopped
@@ -75,7 +75,7 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
 
-# Host_level metrics exporter
+# Host-level metrics exporter
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter

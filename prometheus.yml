@@ -2,7 +2,7 @@
 global:
   scrape_interval: 5s
 
-# Exernal alerting rules
+# External alerting rules
 rule_files:
   - /etc/prometheus/alerts.yml
 
