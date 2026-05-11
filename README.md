@@ -16,6 +16,9 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 - Production networking
 - Security-focused setup
 - Easy horizontal scaling
+- GitHub Actions CI/CD
+- Automated VPS deployment
+- Post-deployment health checks
 
 ---
 
@@ -114,3 +117,6 @@ Docker --> Promtail
 - Firewall hardening with UFW
 - Internal-only monitoring architecture
 - Infrastructure troubleshooting and debugging
+- CI/CD pipelines with GitHub Actions
+- Automated deployment to VPS
+- Healthcheck validation after deployment
