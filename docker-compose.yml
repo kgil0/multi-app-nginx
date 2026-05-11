@@ -2,7 +2,7 @@ services:
   app1:
     image: nginx
     restart: unless-stopped
-    volumes: 
+    volumes:
       - ./app1:/usr/share/nginx/html:ro
     healthcheck:
       test: ["CMD-SHELL", "service nginx status >/dev/null 2>&1"]
@@ -38,7 +38,7 @@ services:
   nginx:
     image: nginx
     restart: unless-stopped
-    ports: 
+    ports:
       - "80:80"
       - "443:443"
     volumes:
@@ -50,12 +50,10 @@ services:
       - app1
       - app2
       - app3
- 
+
   prometheus:
     image: prom/prometheus
     restart: unless-stopped
-    ports:
-      - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./alerts.yml:/etc/prometheus/alerts.yml:ro
@@ -63,32 +61,25 @@ services:
   grafana:
     image: grafana/grafana
     restart: unless-stopped
-    ports:
-      - "3000:3000"
-  
+
+
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
     restart: unless-stopped
-    ports:
-      - "8080:8080"
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
-  
+
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
     restart: unless-stopped
-    ports:
-      - "9100:9100"
 
   loki:
     image: grafana/loki:latest
     restart: unless-stopped
-    ports:
-      - "3100:3100"
 
   promtail:
     image: grafana/promtail:latest
@@ -98,15 +89,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./promtail.yml:/etc/promtail/config.yml:ro
     command: -config.file=/etc/promtail/config.yml
+
   alertmanager:
     image: prom/alertmanager
     restart: unless-stopped
-    ports:
-      - "9093:9093"
     volumes:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+
   blackbox:
     image: prom/blackbox-exporter:latest
     restart: unless-stopped
-    ports:
-      - "9115:9115"
+
