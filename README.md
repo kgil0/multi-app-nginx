@@ -21,9 +21,10 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 
 # Stack
 
-## Backend
-- Node.js
-- Express
+## Applications
+- Static NGINX-based demo applications
+- Multi-container application routing
+- Reverse proxy backend failover
 
 ## Infrastructure
 - Docker
@@ -98,3 +99,18 @@ Docker --> Promtail
 
 ### Running Docker Stack
 ![Docker Containers](screenshots/docker-ps.png)
+
+---
+
+# What I Learned
+
+- Docker container orchestration
+- Reverse proxy configuration with NGINX
+- HTTPS setup using Let's Encrypt
+- Prometheus metrics collection
+- Grafana dashboards and observability
+- Loki centralized logging
+- Docker networking and service isolation
+- Firewall hardening with UFW
+- Internal-only monitoring architecture
+- Infrastructure troubleshooting and debugging
