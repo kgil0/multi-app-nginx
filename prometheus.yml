@@ -1,22 +1,30 @@
+# Global Prometheus scraping configuration
 global:
   scrape_interval: 5s
 
+# Exernal alerting rules
 rule_files:
   - /etc/prometheus/alerts.yml
 
+# Metrics collection targets
 scrape_configs:
+
+# Prometheus self-monitoring
   - job_name: "prometheus"
     static_configs:
       - targets: ["prometheus:9090"]
 
+# Container-level metrics from Docker
   - job_name: "cadvisor"
     static_configs:
       - targets: ["cadvisor:8080"]
-  
+
+# Host operating system metrics
   - job_name: 'node-exporter'
     static_configs:
       - targets: ['node-exporter:9100']
 
+# HTTPS uptime probing using Blackbox Exporter
   - job_name: "blackbox"
     metrics_path: /probe
     params:
@@ -24,6 +32,8 @@ scrape_configs:
     static_configs:
       - targets:
         - https://kgil0-monitor.duckdns.org
+
+# Rewrite target labels for blackbox probing
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -32,7 +42,7 @@ scrape_configs:
       - target_label: __address__
         replacement: blackbox:9115
 
-
+# Alertmanager integration
 alerting:
   alertmanagers:
     - static_configs:
