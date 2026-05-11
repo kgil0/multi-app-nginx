@@ -60,6 +60,7 @@ Monitoring Stack
     ├── Promtail
     ├── cAdvisor
     └── Node Exporter
+```
 
 ## Architecture Diagram
 
