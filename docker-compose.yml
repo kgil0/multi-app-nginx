@@ -1,3 +1,4 @@
+# Frontend application containers
 services:
   app1:
     image: nginx
@@ -35,6 +36,7 @@ services:
       retries: 3
       start_period: 10s
 
+# Reverse proxy handing HTTPS traffic
   nginx:
     image: nginx
     restart: unless-stopped
@@ -51,6 +53,7 @@ services:
       - app2
       - app3
 
+# Metrics collection and monitoring stack
   prometheus:
     image: prom/prometheus
     restart: unless-stopped
@@ -62,7 +65,7 @@ services:
     image: grafana/grafana
     restart: unless-stopped
 
-
+# Container metrics exporter
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
     restart: unless-stopped
@@ -72,15 +75,18 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
 
+# Host_level metrics exporter
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
     restart: unless-stopped
 
+# Centralized log aggregation
   loki:
     image: grafana/loki:latest
     restart: unless-stopped
 
+# Docker log shipping agent
   promtail:
     image: grafana/promtail:latest
     restart: unless-stopped
@@ -90,12 +96,14 @@ services:
       - ./promtail.yml:/etc/promtail/config.yml:ro
     command: -config.file=/etc/promtail/config.yml
 
+# Alert routing service
   alertmanager:
     image: prom/alertmanager
     restart: unless-stopped
     volumes:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
 
+# HTTP/S uptime monitoring exporter
   blackbox:
     image: prom/blackbox-exporter:latest
     restart: unless-stopped
