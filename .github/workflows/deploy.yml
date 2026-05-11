@@ -20,3 +20,5 @@ jobs:
             cd /home/deploy/rebuild-test
             git pull
             docker-compose up -d
+            sleep 10
+            curl -f -A "Mozilla/5.0" https://kgil0-monitor.duckdns.org
