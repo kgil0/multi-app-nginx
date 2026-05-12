@@ -6,3 +6,4 @@ alertmanager.yml
 backups/
 *.save
 *.bak-*
+k8s-health.log
