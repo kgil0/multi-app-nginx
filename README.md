@@ -126,3 +126,21 @@ Docker --> Promtail
 - CI/CD pipelines with GitHub Actions
 - Automated deployment to VPS
 - Healthcheck validation after deployment
+
+## Kubernetes / k3s
+
+This project also includes basic Kubernetes manifests for deploying an NGINX application on a k3s cluster.
+
+Implemented:
+- k3s installation on Ubuntu VPS
+- Kubernetes Deployment
+- Kubernetes ClusterIP Service
+- Pod logs and debugging
+- Replica scaling
+- Rolling update
+- Rollback
+- Declarative YAML manifests
+
+Manifests:
+- `k8s/deployment.yaml`
+- `k8s/service.yaml`
