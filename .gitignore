@@ -5,3 +5,4 @@ certs/
 alertmanager.yml
 backups/
 *.save
+*.bak-*
