@@ -25,6 +25,13 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 - GitHub Actions CI/CD
 - Automated VPS deployment
 - Post-deployment health checks
+- Kubernetes / k3s integration
+- Kubernetes namespaces
+- ConfigMaps and Secrets
+- NodePort services
+- Reverse proxy integration with Kubernetes
+- Bash automation scripts
+- Cron-based health checks
 
 ---
 
@@ -39,6 +46,9 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 - Docker
 - Docker Compose
 - NGINX
+- Kubernetes (k3s)
+- Bash scripting
+- Cron automation
 
 ## Monitoring
 - Grafana
@@ -126,6 +136,15 @@ Docker --> Promtail
 - CI/CD pipelines with GitHub Actions
 - Automated deployment to VPS
 - Healthcheck validation after deployment
+- Kubernetes namespaces management
+- ConfigMaps and Secrets handling
+- NodePort networking
+- Reverse proxy integration with Kubernetes
+- Bash scripting for infrastructure automation
+- Cron job automation
+- Basic AWS EC2 experience
+- AWS CLI basics
+- Terraform Infrastructure as Code basics
 
 ## Kubernetes / k3s
 
@@ -140,6 +159,12 @@ Implemented:
 - Rolling update
 - Rollback
 - Declarative YAML manifests
+- Namespaces
+- ConfigMaps
+- Secrets
+- NodePort Services
+- Reverse proxy integration with Kubernetes
+- Kubernetes healthcheck scripting
 
 Manifests:
 - `k8s/deployment.yaml`
