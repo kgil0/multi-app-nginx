@@ -56,6 +56,7 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 
 - Grafana
 - Prometheus
+- Blackbox Exporter
 - Loki
 - Promtail
 - cAdvisor
@@ -121,6 +122,9 @@ Docker --> Promtail
 
 ### Running Docker Stack
 ![Docker Containers](screenshots/docker-ps.png)
+
+### Kubernetes Status
+![Kubernetes Status](screenshots/k8s-status.png)
 
 ---
 
