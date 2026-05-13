@@ -35,14 +35,16 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 
 ---
 
-# Stack
+## Stack
 
-## Applications
+### Applications
+
 - Static NGINX-based demo applications
 - Multi-container application routing
 - Reverse proxy backend failover
 
-## Infrastructure
+### Infrastructure
+
 - Docker
 - Docker Compose
 - NGINX
@@ -50,7 +52,8 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 - Bash scripting
 - Cron automation
 
-## Monitoring
+### Monitoring
+
 - Grafana
 - Prometheus
 - Loki
@@ -60,7 +63,7 @@ Production-ready Docker platform with reverse proxy, monitoring, logging and sca
 
 ---
 
-# Architecture
+## Architecture
 
 ```text
 Internet
@@ -121,7 +124,7 @@ Docker --> Promtail
 
 ---
 
-# What I Learned
+## What I Learned
 
 - Docker container orchestration
 - Reverse proxy configuration with NGINX
@@ -150,7 +153,8 @@ Docker --> Promtail
 
 This project also includes basic Kubernetes manifests for deploying an NGINX application on a k3s cluster.
 
-Implemented:
+### Implemented Features
+
 - k3s installation on Ubuntu VPS
 - Kubernetes Deployment
 - Kubernetes ClusterIP Service
@@ -169,3 +173,8 @@ Implemented:
 Manifests:
 - `k8s/deployment.yaml`
 - `k8s/service.yaml`
+
+## Related Projects
+
+- Terraform AWS EC2:
+  https://github.com/kgil0/terraform-aws-ec2
