@@ -128,6 +128,35 @@ Docker --> Promtail
 
 ---
 
+## Project Structure
+
+```text
+.
+├── docker-compose.yml
+├── nginx/
+├── monitoring/
+├── k8s/
+├── scripts/
+├── screenshots/
+└── README.md
+```
+
+## CI/CD Workflow
+
+GitHub Actions automatically:
+- validates configuration
+- deploys updated stack to VPS
+- runs post-deployment health checks
+
+## Automation
+
+Infrastructure automation includes:
+- healthcheck scripts
+- cron-based monitoring validation
+- Kubernetes service health verification
+
+---
+
 ## What I Learned
 
 - Docker container orchestration
