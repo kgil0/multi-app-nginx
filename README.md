@@ -109,6 +109,25 @@ Promtail --> Loki
 Docker --> Promtail
 ```
 
+## Networking Flow
+
+```text
+User
+→ DNS
+→ VPS Public IP
+→ NGINX Reverse Proxy
+→ Docker Internal Network
+→ Backend Container
+```
+
+### Flow Explanation
+
+- DNS resolves the domain to the VPS public IP address
+- NGINX handles HTTPS termination and reverse proxying
+- Requests are forwarded through the internal Docker network
+- Backend containers are isolated from direct public access
+- HTTP traffic is automatically redirected to HTTPS
+
 ## Screenshots
 
 ### Grafana Monitoring Dashboard
