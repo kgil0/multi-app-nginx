@@ -64,6 +64,8 @@ services:
   grafana:
     image: grafana/grafana
     restart: unless-stopped
+    volumes:
+      - grafana-data:/var/lib/grafana
 
 # Container metrics exporter
   cadvisor:
@@ -108,3 +110,5 @@ services:
     image: prom/blackbox-exporter:latest
     restart: unless-stopped
 
+volumes:
+  grafana-data:
