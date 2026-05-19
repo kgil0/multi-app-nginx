@@ -239,3 +239,10 @@ Only the NGINX reverse proxy exposes public host ports:
 - 443/tcp
 
 Monitoring services such as Grafana, Prometheus and Loki are available only inside the Docker internal network and are not directly exposed to the public internet.
+
+### Grafana Persistence
+
+Grafana uses a named Docker volume:
+
+```text
+rebuild-test_grafana-data → /var/lib/grafana
