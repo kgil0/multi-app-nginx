@@ -249,3 +249,15 @@ rebuild-test_grafana-data → /var/lib/grafana
 ```
 
 This keeps Grafana data such as `grafana.db`, dashboards and configuration persistent even if the Grafana container is removed and recreated.
+
+### Docker Internal DNS
+
+Containers inside the same Docker Compose network can communicate using service names instead of IP addresses.
+
+Examples tested from the NGINX container:
+
+```bash
+curl http://grafana:3000
+curl -I http://prometheus:9090
+curl -I http://app1:80
+```
