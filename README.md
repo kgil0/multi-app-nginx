@@ -246,3 +246,6 @@ Grafana uses a named Docker volume:
 
 ```text
 rebuild-test_grafana-data → /var/lib/grafana
+```
+
+This keeps Grafana data such as `grafana.db`, dashboards and configuration persistent even if the Grafana container is removed and recreated.
