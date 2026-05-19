@@ -230,3 +230,12 @@ Manifests:
 
 - Terraform AWS EC2:
   https://github.com/kgil0/terraform-aws-ec2
+
+### Docker Port Exposure
+
+Only the NGINX reverse proxy exposes public host ports:
+
+- 80/tcp
+- 443/tcp
+
+Monitoring services such as Grafana, Prometheus and Loki are available only inside the Docker internal network and are not directly exposed to the public internet.
